@@ -25,5 +25,17 @@ namespace PassRegistration.Controllers
 
             return View(registrations);
         }
+
+        public ActionResult New()
+        {
+            return View();
+        }
+
+        public ActionResult Add(PassRegistration registration)
+        {
+            _dbContext.PassRegistrations.Add(registration);
+            _dbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
