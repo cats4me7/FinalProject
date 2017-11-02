@@ -26,5 +26,11 @@ namespace PassRegistration.Controllers
 
             return View();
         }
+
+        public ActionResult Statistics()
+        {
+
+            return View();
+        }
     }
 }
