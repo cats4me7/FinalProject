@@ -265,7 +265,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\PassRegistration\Index.cshtml" />
     <Content Include="Views\PassRegistration\New.cshtml" />
-    <Content Include="Views\Home\Statistics.cshtml" />
+    <Content Include="Views\Home\AdminPass.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -27,9 +27,9 @@ namespace PassRegistration.Controllers
             return View();
         }
 
-        public ActionResult Statistics()
+        public ActionResult AdminPass()
         {
-            ViewBag.Message = "Pass Statistics.";
+            ViewBag.Message = "Admin Pass Repository.";
 
             return View();
         }
