@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PassRegistration.Models.PassRegistration>
+@model IEnumerable<PassRegistration.Models.PassRegistration>
 
 @{
     ViewBag.Title = "Index";
@@ -32,6 +32,7 @@
                     <td>@consultation.City</td>
                     <td>@consultation.PhoneNumber</td>
                     <td>@consultation.Email</td>
+                    <td>@Html.ActionLink("Delete", "Delete", new { id = consultation.Id })</td>
                 </tr>
             }
         </tbody>
