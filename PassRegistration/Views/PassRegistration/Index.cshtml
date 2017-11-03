@@ -32,6 +32,7 @@
                     <td>@consultation.City</td>
                     <td>@consultation.PhoneNumber</td>
                     <td>@consultation.Email</td>
+                    <td>@Html.ActionLink("Delete", "Delete", new { id = consultation.Id })</td>
                 </tr>
             }
         </tbody>

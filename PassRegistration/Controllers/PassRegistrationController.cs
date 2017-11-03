@@ -37,5 +37,26 @@ namespace PassRegistration.Controllers
             _dbContext.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Delete(int id)
+        {
+            var registration = _dbContext.PassRegistrations.SingleOrDefault(v => v.Id == id);
+
+            if (registration == null)
+                return HttpNotFound();
+
+            return View(registration);
+        }
+
+        [HttpPost]
+        public ActionResult DoDelete(int id)
+        {
+            var registration = _dbContext.PassRegistrations.SingleOrDefault(v => v.Id == id);
+            if (registration == null)
+                return HttpNotFound();
+            _dbContext.PassRegistrations.Remove(registration);
+            _dbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
