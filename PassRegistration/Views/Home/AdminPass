@@ -1,7 +1,0 @@
-@{
-    ViewBag.Title = "Admin Pass View";
-}
-
-<h2>Admin Pass View</h2>
-<p>This section will be used to show all passes and search them for a name and allow editing.</p>
-<p>This will only be viewable as an admin.</p>
