@@ -26,5 +26,12 @@ namespace PassRegistration.Controllers
 
             return View();
         }
+        
+         public ActionResult AdminPass()
+        {
+            ViewBag.Message = "Admin Pass Repository.";
+
+            return View();
+        }
     }
 }
