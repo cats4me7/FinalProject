@@ -15,19 +15,19 @@ namespace PassRegistration.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Information about the company and the Passes.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Buisness Contacts.";
 
             return View();
         }
-        
-         public ActionResult AdminPass()
+
+        public ActionResult AdminPass()
         {
             ViewBag.Message = "Admin Pass Repository.";
 
