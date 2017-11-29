@@ -5,7 +5,7 @@
  * website or online service, subject to the applicable licensing or use
  * terms; or (ii) using the files as included with a Microsoft product subject
  * to that product's license terms. Microsoft reserves all other rights to the
- * files not expressly granted by Microsoft, whether by implication, estoppel
+ * files not expressly granted by Microsoft, whether by implication, estoppe
  * or otherwise. The notices and licenses below are for informational purposes only.
  *
  * NUGET: END LICENSE TEXT */
@@ -315,7 +315,7 @@ body {
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #7CFC00;
 }
 
 input,
