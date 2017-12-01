@@ -26,6 +26,13 @@ namespace PassRegistration.Controllers
             return View(registrations);
         }
 
+        public ActionResult AdminPass1()
+        {
+            var registrations = _dbContext.PassRegistrations.ToList();
+
+            return View(registrations);
+        }
+
         public ActionResult New()
         {
             return View();

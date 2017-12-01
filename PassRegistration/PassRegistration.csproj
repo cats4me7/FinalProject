@@ -264,6 +264,7 @@
     <Content Include="Views\PassRegistration\New.cshtml" />
     <Content Include="Views\PassRegistration\Delete.cshtml" />
     <Content Include="Views\Home\AdminPass.cshtml" />
+    <Content Include="Views\PassRegistration\AdminPass1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
