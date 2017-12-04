@@ -42,7 +42,7 @@ namespace PassRegistration.Controllers
         {
             _dbContext.PassRegistrations.Add(registration);
             _dbContext.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Home");
         }
 
         public ActionResult Delete(int id)

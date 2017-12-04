@@ -5,6 +5,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@if (User.IsInRole("Admin"))
+{
+
+ <h2>
+
+
+
+ </h2>
+
 <h2>Currently Registered Passes.</h2>
 
 <div class="container">
@@ -36,3 +45,8 @@
     </table>
 
 </div>
+}
+else
+{
+    Response.Redirect("/home");
+}
