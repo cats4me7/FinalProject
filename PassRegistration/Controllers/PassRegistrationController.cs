@@ -65,5 +65,35 @@ namespace PassRegistration.Controllers
             _dbContext.SaveChanges();
             return RedirectToAction("Index");
         }
+
+
+
+        public ActionResult Edit(int id)
+        {
+            var video = _dbContext.PassRegistrations.SingleOrDefault(v => v.Id == id);
+
+            if (video == null)
+                return HttpNotFound();
+
+            return View(video);
+        }
+
+        public ActionResult Update(PassRegistration video)
+        {
+            var videoInDb = _dbContext.PassRegistrations.SingleOrDefault(v => v.Id == video.Id);
+
+            if (videoInDb == null)
+                return HttpNotFound();
+
+            videoInDb.Name = video.Name;
+            videoInDb.NumberInHouse = video.NumberInHouse;
+            videoInDb.Address = video.Address;
+            videoInDb.City = video.City;
+            videoInDb.PhoneNumber = video.PhoneNumber;
+            videoInDb.Email = video.Email;
+            _dbContext.SaveChanges();
+
+            return RedirectToAction("AdminPass1");
+        }
     }
 }

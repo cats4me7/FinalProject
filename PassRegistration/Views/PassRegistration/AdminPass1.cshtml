@@ -8,6 +8,7 @@
 @if (User.IsInRole("Admin"))
 {
 
+
  <h2>
 
 
@@ -26,6 +27,7 @@
                 <th>City</th>
                 <th>Phone No.</th>
                 <th>Email</th>
+                <th>Edit</th>
             </tr>
         </thead>
         <tbody>
@@ -39,6 +41,7 @@
                     <td>@consultation.PhoneNumber</td>
                     <td>@consultation.Email</td>
                     <td>@Html.ActionLink("Delete", "Delete", new { id = consultation.Id })</td>
+                    <td>@Html.ActionLink("Edit", "Edit", new { id = consultation.Id })</td>
                 </tr>
             }
         </tbody>
