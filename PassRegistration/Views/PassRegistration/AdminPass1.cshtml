@@ -13,41 +13,46 @@
 
 
 
+
+     TEST
+
  </h2>
 
 <h2>Currently Registered Passes.</h2>
 
-<div class="container">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th># In HouseHold</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>Phone No.</th>
-                <th>Email</th>
-                <th>Edit</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var consultation in Model)
-            {
+<center>
+    <div class="container">
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>@consultation.Name</td>
-                    <td>@consultation.NumberInHouse</td>
-                    <td>@consultation.Address</td>
-                    <td>@consultation.City</td>
-                    <td>@consultation.PhoneNumber</td>
-                    <td>@consultation.Email</td>
-                    <td>@Html.ActionLink("Delete", "Delete", new { id = consultation.Id })</td>
-                    <td>@Html.ActionLink("Edit", "Edit", new { id = consultation.Id })</td>
+                    <th>Name</th>
+                    <th># In HouseHold</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Phone No.</th>
+                    <th>Email</th>
+                    <th>Edit</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var consultation in Model)
+                {
+                    <tr>
+                        <td>@consultation.Name</td>
+                        <td>@consultation.NumberInHouse</td>
+                        <td>@consultation.Address</td>
+                        <td>@consultation.City</td>
+                        <td>@consultation.PhoneNumber</td>
+                        <td>@consultation.Email</td>
+                        <td>@Html.ActionLink("Delete", "Delete", new { id = consultation.Id })</td>
+                        <td>@Html.ActionLink("Edit", "Edit", new { id = consultation.Id })</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 
-</div>
+    </div>
+</center>
 }
 else
 {
