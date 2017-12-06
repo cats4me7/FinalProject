@@ -39,6 +39,11 @@
         @Html.TextAreaFor(m => m.Email, new { @class = "form-control" })
     </div>
 
+    <div class="form-group">
+        @Html.LabelFor(m => m.Status)
+        @Html.TextAreaFor(m => m.Status, new { @class = "form-control" })
+    </div>
+
     @Html.HiddenFor(m => m.Id)
     <input type="submit" class="btn btn-primary" value="Save" />
 

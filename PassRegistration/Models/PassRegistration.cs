@@ -16,5 +16,13 @@ namespace PassRegistration.Models
         public int ZipCode { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
+        public string Status { get; set; }
+
+        public PassRegistration()
+        {
+            Status = "Pending";
+        }
     }
+
 }
+

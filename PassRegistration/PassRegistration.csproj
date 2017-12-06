@@ -197,6 +197,10 @@
     <Compile Include="Migrations\201711011908236_PassRegistrationTable.Designer.cs">
       <DependentUpon>201711011908236_PassRegistrationTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712062021403_AddPassRegistrations.cs" />
+    <Compile Include="Migrations\201712062021403_AddPassRegistrations.Designer.cs">
+      <DependentUpon>201712062021403_AddPassRegistrations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -286,6 +290,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201711011908236_PassRegistrationTable.resx">
       <DependentUpon>201711011908236_PassRegistrationTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712062021403_AddPassRegistrations.resx">
+      <DependentUpon>201712062021403_AddPassRegistrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
