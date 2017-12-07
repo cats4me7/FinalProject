@@ -4,47 +4,118 @@
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>New Registration</h2>
-
-
-@using (Html.BeginForm("Update", "PassRegistration", FormMethod.Post, new { @class = "form" }))
+@if (User.IsInRole("Admin"))
 {
-    <div class="form-group">
-        @Html.LabelFor(m => m.Name)
-        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
-    </div>
+
+<div class="col-lg-2">
+    <br />
+    <br />
+    <br />
+
+</div>
+
+<div class="col-lg-4">
+    <br />
+    <br />
+    <br />
+    <br />
+    <h2>New Registration</h2>
+
+
+    @using (Html.BeginForm("Update", "PassRegistration", FormMethod.Post, new { @class = "form" }))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Address)
+            @Html.TextAreaFor(m => m.Address, new { @class = "form-control", rows = 4 })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.NumberInHouse)
+            @Html.TextAreaFor(m => m.NumberInHouse, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.City)
+            @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.PhoneNumber)
+            @Html.TextAreaFor(m => m.PhoneNumber, new { @class = "form-control", rows = 4 })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email)
+            @Html.TextAreaFor(m => m.Email, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Status)
+            @Html.TextAreaFor(m => m.Status, new { @class = "form-control" })
+        </div>
+
+        @Html.HiddenFor(m => m.Id)
+        <input type="submit" class="btn btn-primary" value="Save" />
+
+    }
+</div>
+
+
+<div class="col-lg-4">
+    
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
     <div class="form-group">
-        @Html.LabelFor(m => m.Address)
-        @Html.TextAreaFor(m => m.Address, new { @class = "form-control", rows = 4 })
     </div>
-
+        <br />
+        <h3>Name</h3>
+        <p>Pass Holders Name, First-Last Format</p>
     <div class="form-group">
-        @Html.LabelFor(m => m.NumberInHouse)
-        @Html.TextAreaFor(m => m.NumberInHouse, new { @class = "form-control" })
+    </div>
+        <h3>Adress</h3>
+        <p>Pass holders Adress, Street-Number format.</p>
+    <div class="form-group">
+    </div>
+        <br />
+        <br />
+        <h3>Number In House</h3>
+        <p>Number of people in Pass Holders house.</p>
+    <div class="form-group">
+    </div>
+        <h3>City</h3>
+        <p>City Pass Holder lives in.</p>
+    <div class="form-group">
+    </div>
+        <br />
+        <h3>Phone Number</h3>
+        <p>Pass Holders phone number. xxx-xxx-xxxx Format.</p>
+    <div class="form-group">
+        <br />
+        <br />
+        <h3>Email</h3>
+        <p>Pass Holders email.</p>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.City)
-        @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+        <h3>Status</h3>
+        <p>Pass Holders pass status. Approved, Pending, Needs Payment</p>
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.PhoneNumber)
-        @Html.TextAreaFor(m => m.PhoneNumber, new { @class = "form-control", rows = 4 })
-    </div>
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email)
-        @Html.TextAreaFor(m => m.Email, new { @class = "form-control" })
-    </div>
+</div>
 
-    <div class="form-group">
-        @Html.LabelFor(m => m.Status)
-        @Html.TextAreaFor(m => m.Status, new { @class = "form-control" })
-    </div>
+<div class="col-lg-2">
 
-    @Html.HiddenFor(m => m.Id)
-    <input type="submit" class="btn btn-primary" value="Save" />
-
+ </div>
+}
+else
+{
+    Response.Redirect("/home");
 }

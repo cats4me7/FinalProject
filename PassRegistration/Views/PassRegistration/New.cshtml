@@ -6,7 +6,9 @@
 }
 
 
-    
+ @if (User.Identity.Name.Length > 0)
+ {
+
 
 
     <div class="col-lg-4">
@@ -14,7 +16,20 @@
         <br />
         <br />
         <br />
-        <p>This is filler area</p>
+        <img src="http://nebula.wsimg.com/7257c48b923bf090347611933235e1d6?AccessKeyId=9C55814FA3A2F565B863&disposition=0&alloworigin=1" />
+        <br />
+        <br />
+        <p> The new recycling center is located at 800 Virginia Avenue Huntington WV at the old National Guard Armory.</p>
+        <br />
+        <h3>Recycling tips</h3>
+        <p>Mix all items together – no separation required</p>
+        <br />
+        <p>Empty all bottles, jugs and cans</p>
+        <p>No need to remove labels</p>
+        <p>For plastic bottles, empty, crush and reattach lids</p>
+        <p>For cartons, remove plastic caps and straws</p>
+        <p>NEVER place medical sharps or needles in the recycling.</p>
+        
     </div>
 
     <div class="col-lg-4">
@@ -24,10 +39,13 @@
             <br />
             <br />
             <br />
+            <br />
+            <br />
             <h2> </h2>
-            <h2>New Registration</h2>
-
             <center>
+                <h2>New Registration</h2>
+
+
                 <div class="form-group">
                     @Html.LabelFor(m => m.Name)
                     @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
@@ -67,5 +85,22 @@
         <br />
         <br />
         <br />
-        <p>This is filler area</p>
+        <img src="http://nebula.wsimg.com/7257c48b923bf090347611933235e1d6?AccessKeyId=9C55814FA3A2F565B863&disposition=0&alloworigin=1" />
+        <br />
+        <br />
+        <h3> List of accepted items at the new recycling center:.</h3>
+        <br />
+        <p>Glass Bottles & Jars (all colors)</p>
+        <p>Metal Cans:  Aluminum cans, steel cans and lids, empty aerosol cans with the lids and tips removed</p>
+        <p>Plastic Bottles(empty, crush, reattach lid): Bottles and jugs that have a small mouth and wider base, such as milk jugs, soda bottles, laundry detergent bottles, water bottles, shampoo bottles and contact solution bottles</p>
+        <p>Paper: newspaper, magazines, cardboard, mixed office paper and envelopes, paperboard (cereal boxes), pizza boxes free of food debris and grease, telephone books and catalogs</p>
+        <p>Cartons: food and beverage cartons, such as milk, juice, soup, wine, broth and other cartons.</p>
+        <br />
+        
+
     </div>
+ }
+ else
+{
+    Response.Redirect("/Account/Login");
+}
