@@ -9,6 +9,8 @@ namespace PassRegistration.Controllers
     using System.Linq;
     using System.Web.Mvc;
     using PassRegistration.Models;
+    using System.ComponentModel.DataAnnotations;
+
     public class PassRegistrationController : Controller
     {
         private ApplicationDbContext _dbContext;
@@ -40,9 +42,16 @@ namespace PassRegistration.Controllers
 
         public ActionResult Add(PassRegistration registration)
         {
-            _dbContext.PassRegistrations.Add(registration);
-            _dbContext.SaveChanges();
-            return RedirectToAction("Index","Home");
+            try
+            {
+                _dbContext.PassRegistrations.Add(registration);
+                _dbContext.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception error)
+            {
+                return View("New");
+            }
         }
 
         public ActionResult Delete(int id)
@@ -83,8 +92,9 @@ namespace PassRegistration.Controllers
             var videoInDb = _dbContext.PassRegistrations.SingleOrDefault(v => v.Id == video.Id);
 
             if (videoInDb == null)
-                return HttpNotFound();
+              return HttpNotFound(); 
 
+           
             videoInDb.Name = video.Name;
             videoInDb.NumberInHouse = video.NumberInHouse;
             videoInDb.Address = video.Address;
