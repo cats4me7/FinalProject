@@ -91,6 +91,7 @@ namespace PassRegistration.Controllers
             videoInDb.City = video.City;
             videoInDb.PhoneNumber = video.PhoneNumber;
             videoInDb.Email = video.Email;
+            videoInDb.Status = video.Status;
             _dbContext.SaveChanges();
 
             return RedirectToAction("AdminPass1");
